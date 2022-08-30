@@ -1,27 +1,29 @@
 <template>
   <div>
     <!-- Header Section with NavBar -->
-     <header></header>
+    <header>
+      <!-- Top Bar Section -->
+      <top-bar/>
+      <!-- Top Bar Ends -->
+    </header>
     <!-- Header Section with NavBar Ends-->
 
     <!-- Content Here -->
-    <slot>
-
-    </slot>
+    <slot> </slot>
     <!-- Content Ends -->
 
     <!-- Footer Section Goes Here -->
-    <footer>
-        
-    </footer>
+    <footer></footer>
     <!-- Footer Section Ends -->
   </div>
 </template>
 
 <script>
+import TopBar from '@/components/TopBar.vue'
 export default {
-
-}
+  name: "TemplateView",
+  components: {TopBar}
+};
 </script>
 
 <style>
