@@ -44,7 +44,7 @@ export default {
   color: white;
   background-color: transparent;
   border: 1px solid white;
-  font-size: 13px;
+  font-size: 12px;
   border-radius: 5px;
   padding: 0 10px;
   height: 30px;
@@ -55,6 +55,6 @@ export default {
 }
 h6{
  color: white;
- font-size: 17px;
+ font-size: 16px;
 }
 </style>
