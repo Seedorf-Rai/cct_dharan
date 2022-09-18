@@ -21,10 +21,11 @@ import {SelfBuildingSquareSpinner} from 'epic-spinners'
       })
     },
     methods:{
-      ...mapActions(['getMenus'])
+      ...mapActions(['getMenus','getCompanyDetails'])
     },
     mounted(){
       this.getMenus()
+      this.getCompanyDetails()
     }
   }
 </script>

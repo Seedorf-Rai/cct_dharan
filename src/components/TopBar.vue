@@ -14,13 +14,13 @@
                   <a href="" class="text-white" style="font-size: 25px"
                     ><i class="fa-solid fa-phone"></i
                   ></a>
-                  <h6 class="mt-2 ms-3">025-534344</h6>
+                  <h6 class="mt-2 ms-3">{{ company.telephone_1 }}</h6>
                 </div>
                 <div class="d-flex align-items-center">
                   <a href="" class="text-white" style="font-size: 25px"
                     ><i class="fa-solid fa-envelope"></i
                   ></a>
-                  <h6 class="mt-2 ms-3">info@cct.tu.edu.np</h6>
+                  <h6 class="mt-2 ms-3">{{ company.email }}</h6>
                 </div>
                 <div class="d-flex align-items-center">
                   <button class="login-btn"><span style="color: #F8FF01">Apply</span> Online</button>
@@ -33,8 +33,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
-  name: 'TopBar'
+  name: 'TopBar',
+  computed:{
+   ...mapGetters({
+    company: "GET_COMPANY"
+   })
+  }
 }
 </script>
 
