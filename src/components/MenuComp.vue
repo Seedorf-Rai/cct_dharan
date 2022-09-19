@@ -1,7 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+  <nav class="navbar navbar-expand-lg  navbar-light bg-light">
+    <div class="container">
       <button
         class="navbar-toggler"
         type="button"
@@ -19,7 +18,7 @@
             class="nav-item dropdown"
             v-for="(menu, index) in menus"
             :key="index"
-          >
+           >
             <a v-if="menu.pages.length > 0"
               class="nav-link dropdown-toggle"
               href="#"
@@ -30,6 +29,7 @@
             >
               {{ menu.title }}
             </a>
+
             <a v-else
               class="nav-link"
               href="#"
@@ -37,12 +37,13 @@
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+
             >
               {{ menu.title }}
             </a>
             <ul class="dropdown-menu" v-if="menu.pages.length > 0" >
               <li v-for="(submenu, index) in menu.pages" :key="index">
-                <a class="dropdown-item" href="#">{{ submenu.title }}</a>
+                <a class="dropdown-item" href="#" @click.prevent="$router.push({name:'page',params:{id:submenu.id}})">{{ submenu.title }}</a>
               </li>
             </ul>
           </li>

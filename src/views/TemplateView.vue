@@ -6,9 +6,7 @@
       <top-bar/>
       <!-- Top Bar Ends -->
       <!-- Middle Heading -->
-      <div>
-        Middle Heading
-      </div>
+      <middle-bar/>
       <!-- Middle Heading Ends -->
       <!-- NavBar -->
       <menu-comp/>
@@ -29,9 +27,10 @@
 <script>
 import TopBar from '@/components/TopBar.vue'
 import MenuComp from '@/components/MenuComp.vue';
+import MiddleBar from '@/components/MiddleBar.vue'
 export default {
   name: "TemplateView",
-  components: {TopBar,MenuComp}
+  components: {TopBar,MenuComp,MiddleBar}
 };
 </script>
 
