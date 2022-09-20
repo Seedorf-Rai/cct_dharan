@@ -1,16 +1,34 @@
 <template>
-  <div>
+
     <template-view>
-        <h1>Welcome to Single Page App</h1>
+       <div>
+        <div class="container">
+          <!-- <p v-html="singlePage.descriptions"></p>
+           -->
+           <h1>Single Page Application</h1>
+        </div>
+       </div>
     </template-view>
-  </div>
+
 </template>
 
 <script>
-    import TemplateView from './TemplateView.vue'
+    import { mapGetters } from 'vuex';
+import TemplateView from './TemplateView.vue'
 export default {
   name: 'PageView',
-  components: {TemplateView}
+  components: {TemplateView},
+  computed: {
+    ...mapGetters({
+      menus: 'GET_MENU',
+    }),
+    page(){
+      return this.menus.find((e)=> e.pages.find((p)=> p.id == this.id))
+    },
+    singlePage(){
+      return this.page['pages'].find((p) => p.id == this.id)
+    }
+  }
 }
 </script>
 
