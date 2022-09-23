@@ -19,6 +19,9 @@
             v-for="(menu, index) in menus"
             :key="index"
            >
+           <a v-if ="menu.link == '#' && menu.pages.length == 0" class="nav-link" href="menu.link" target="_blank" @click.prevent="$router({name: menu.slug})">
+              {{ menu.title }}
+             </a>
             <a v-if="menu.pages.length > 0"
               class="nav-link dropdown-toggle"
               href="#"
@@ -29,6 +32,7 @@
             >
               {{ menu.title }}
             </a>
+
 
             <a v-else
               class="nav-link"

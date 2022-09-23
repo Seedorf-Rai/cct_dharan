@@ -5,10 +5,14 @@ import axios from 'axios'
 import store from './store'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import Vuesax from 'vuesax'
+
+import 'vuesax/dist/vuesax.css'
 
 Vue.config.productionTip = false
 Vue.use(axios)
 Vue.use(ElementUI)
+Vue.use(Vuesax)
 new Vue({
   router,
   store,
